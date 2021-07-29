@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:'Open Sans', sans-serif ;
+}
+body{
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#1d3548 10%,#cbd5dd 65%,#1d3548 100%);
+}
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.container .card
+{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background: linear-gradient(rgb(218, 214, 217) 20%,#b5b2ce 30%,#1d3548 100%);
+    margin: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: none;
+    box-shadow:0 0 100px rgb(248, 159, 208) ;
+}
+
+.container .card .imgBox
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 100000;
+    transform-origin: top;
+    border-radius: 30px;
+    box-shadow: 0 0 70px #f0eaef;
+    overflow: hidden;
+}
+.container .card:hover .imgBox
+{
+    transform: translateY(20px) scale(0.5);
+    border-radius: 50%;
+    box-shadow: 40px;
+}
+
+.container .card .imgBox img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .card .content
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    transform: scale(5);
+    transition: 0.5s;
+}
+.container .card:hover .content
+{
+    transform: scale(1);
+}
+.container .card .content .details
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.container .card .content .details h2
+{
+    color: white;
+    font-size: 1.2em;
+}
+.container .card .content .details h2 span
+{
+    font-size: 0.8em;
+    font-weight: bold;
+    color: skyblue;
+}
+.social_icons
+{
+    position: relative;
+    display: flex;
+    margin-top: 5px;
+}
+.social_icons li
+{
+list-style: none;
+margin: 4px;
+}
+.social_icons li a
+{
+width: 45px;
+height: 45px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgb(8, 46, 65);
+border-radius: 50%;
+font-size: 1.5em;
+color: white;
+text-decoration: none;
+transition: 0.5s;
+}
+.social_icons li a:hover 
+{
+    transform: rotate(360deg);
+    background-color: rgb(226, 124, 226);
+}
